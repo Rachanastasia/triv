@@ -2,15 +2,15 @@ import React, { Fragment, useState } from 'react'
 import { GrCaretNext } from 'react-icons/gr';
 
 function Question(props) {
-    const [answered, setAnswered] = useState(null)
-    const [selected, setSelected] = useState(null)
+    const [answered, setAnswered] = useState(null);
+    const [selected, setSelected] = useState(null);
     let answers = [...props.question.incorrect, props.question.correct].sort();
 
     return (
         <section>
             <h2>{props.question.question}</h2>
             <ul>
-                <li className={isSelected(0)}>{answers[0]}</li>
+                <li>{answers[0]}</li>
                 <li>{answers[1]}</li>
                 <li>{answers[2]}</li>
                 <li>{answers[3]}</li>
