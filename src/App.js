@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Question from './components/Question';
 import Start from './components/Start';
 import Data from './Apprentice_TandemFor400_Data.json';
+import './styles/global.css';
+import './styles/main.css';
+
 
 function App() {
   const [i, seti] = useState(0)
