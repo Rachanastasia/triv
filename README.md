@@ -2,9 +2,7 @@
 
 Triv helps you become better at trivia by generating random trivia questions.
 
-This is the repository for the project.
-
-Live version:
+Live app:
 
 ## Available Scripts
 
@@ -22,7 +20,9 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.
 
-## Prompt (from Tandem)
+## Prompt
+
+###from [Tandem](https://madeintandem.com/)
 
 While weʼre all knowledgeable in our own right, only one person can be crowned trivia champion with
 the highest score. Your goal is to create an application that others will be able to use in order to help
