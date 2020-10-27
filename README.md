@@ -22,7 +22,7 @@ Launches the test runner in the interactive watch mode.
 
 ## Prompt
 
-###from [Tandem](https://madeintandem.com/)
+### from [Tandem](https://madeintandem.com/)
 
 While weʼre all knowledgeable in our own right, only one person can be crowned trivia champion with
 the highest score. Your goal is to create an application that others will be able to use in order to help
