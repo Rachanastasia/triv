@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Question from './components/Question';
+import Start from './components/Start';
+import Data from './Apprentice_TandemFor400_Data.json';
 
 function App() {
+  const [i, seti] = useState(0)
+  const [question, setQuestion] = useState(0)
+  const [playing, setPlaying] = useState(false)
+
+  const onStart = () => {
+    seti(0)
+    setPlaying(true)
+  }
+
+  const onNext = () => {
+    setQuestion(Math.floor(Math.random() * 22));
+    seti(i + 1)
+
+  }
+
+  if (i >= 10) {
+    if (playing)
+      setPlaying(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      {playing
+        ? <Question question={Data[question]} next={onNext} />
+        : <Start start={onStart} />
+
+      }
+    </main>
   );
 }
 

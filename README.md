@@ -29,42 +29,35 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Prompt
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+While weʼre all knowledgeable in our own right, only one person can be crowned trivia champion with
+the highest score. Your goal is to create an application that others will be able to use in order to help
+improve their trivia skills.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Train to improve your trivia knowledge by creating your own trivia training app!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Assumptions
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A round of trivia has 10 Questions
 
-## Learn More
+All questions are multiple-choice questions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Your score does not need to update in real time
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Results can update on form submit, button click, or any interaction you choose
 
-### Code Splitting
+We will provide you with the trivia data such as the questions, correct and incorrect answers via a
+Assumptions
+JSON file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Criteria
 
-### Analyzing the Bundle Size
+A user can view questions.
+Questions with their multiple choice options must be displayed one at a time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Questions should not repeat in a round.
+A user can select only 1 answer out of the 4 possible answers.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The correct answer must be revealed after a user has submitted their answer
+A user can see the score they received at the end of the round
