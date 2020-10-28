@@ -6,17 +6,17 @@
 
 main{
     width: 100%;
-    height: 100vw;
+    height: 100vh;
     background-color: var(--colors-primary);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     color: var(--colors-grey-variant);
 }
 
 section{
     width: 100%;
-    height: inherit;
+    height: 80%;
     padding: var(--spacer-lg);
     display: flex;
     flex-direction: column;

@@ -3,16 +3,18 @@ import { GrCaretNext } from 'react-icons/gr';
 
 function Question(props) {
     const [answered, setAnswered] = useState(null);
-    const [selected, setSelected] = useState(null);
     let answers = [...props.question.incorrect, props.question.correct].sort();
 
     const handleNext = () => {
         setAnswered(null);
         props.next();
     }
+    const checkAnswered = () => {
+        return;
+    }
 
     return (
-        <section>
+        <Fragment>
             <h2>{props.question.question}</h2>
 
             {answered === 'right'
@@ -35,16 +37,30 @@ function Question(props) {
                     :
                     <Fragment>
                         <ul>
-                            <div className='answer'><li className='answer'>{answers[0]}</li></div>
-                            <div className='answer'><li className='answer'>{answers[1]}</li></div>
-                            <div className='answer'><li className='answer'>{answers[2]}</li></div>
-                            <div className='answer'><li className='answer'>{answers[3]}</li></div>
+                            <div className='answer' disabled={answered !== null} onClick={checkAnswered}><li className='answer'>{answers[0]}</li></div>
+                            <div className='answer' disabled={answered !== null} onClick={checkAnswered}><li className='answer'>{answers[1]}</li></div>
+                            <div className='answer' disabled={answered !== null} onClick={checkAnswered}><li className='answer'>{answers[2]}</li></div>
+                            <div className='answer' disabled={answered !== null} onClick={checkAnswered}><li className='answer'>{answers[3]}</li></div>
                         </ul>
-                        <button onClick={() => setAnswered('right')}>Submit</button>
+                        <div>
+                            <button onClick={() => setAnswered('right')}>Submit</button>
+                        </div>
                     </Fragment>
             }
-        </section >
+        </Fragment>
     )
 }
 
-export default Question
+//class flag
+//button relative to div
+
+export default Question;
+
+
+Question.defaultProps = {
+    question: {
+        question: "What is the national animal of Scotland?",
+        incorrect: ["Bear", "Rabbit", "Seal"],
+        correct: "Unicorn"
+    }
+}
