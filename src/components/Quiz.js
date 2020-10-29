@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Data from '../Apprentice_TandemFor400_Data.json';
-import Question from './Question';
+import Question from './question/Question';
 import Results from './Results';
 
 
@@ -11,24 +11,26 @@ function Quiz(props) {
 
     const [i, seti] = useState(0);
     const [questions, setQuestions] = useState(data);
-    const [question, setQuestion] = useState(Math.ceil(Math.random() * questions.length));
+    const [question, setQuestion] = useState(Math.ceil(Math.random() * questions.length - 1));
+    const [score, setScore] = useState(0);
 
     //resets questions data and i to 0
     useEffect(() => {
         setQuestions(data)
+        setScore(0)
         return () => seti(0)
     }, [])
 
 
-
-    const onNext = (correct = true) => {
-        if (correct) {
+    const onNext = (ans) => {
+        //removes question from randomized arr if correct
+        if (ans === true) {
+            setScore(score + 1)
             let q = questions
             q.splice(question, 1)
             setQuestions(q)
         }
-
-        setQuestion(Math.ceil(Math.random() * questions.length));
+        setQuestion(Math.ceil(Math.random() * questions.length - 1));
         seti(i + 1)
     }
 
@@ -39,8 +41,8 @@ function Quiz(props) {
     return (
         <section>
             {i <= 10
-                ? <Question question={questions[question]} next={onNext} />
-                : <Results playAgain={playAgain} />
+                ? <Question question={questions[question]} next={(ans) => onNext(ans)} />
+                : <Results playAgain={playAgain} score={score} />
             }
         </section>
 

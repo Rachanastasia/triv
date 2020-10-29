@@ -12,6 +12,7 @@ main{
     justify-content: center;
     align-items: center;
     color: var(--colors-grey-variant);
+    
 }
 
 section{
@@ -22,26 +23,71 @@ section{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
 ul{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--fontsize-med);
 }
 
 li{
     padding: var(--spacer-sm);
     padding-bottom: 0;
+    width: inherit
+
+}
+
+p{
+    font-size: var(--fontsize-med);
 }
 
 button{
     padding:  var(--spacer-sm);
     margin: var(--spacer-sm);
     border-radius: 8px;
-    border: 0;
+    border: 2px solid var(--colors-primary);
     color: var(--colors-secondary);
     background-color: var(--colors-grey-variant);
+    outline: 0;
+    font-size: var(--fontsize-sm);
+}
+
+button:focus{
+    color: var(--colors-grey-variant);
+    background-color: var(--colors-primary);
+    border: 2px solid var(--colors-grey-variant);
 }
 
 .icon{
     color: var(--colors-secondary);
+}
+
+
+
+.answer{
+    width: 70vw;
+    border: 2px solid var(--colors-primary);
+    
+    
+}
+.answer li{
+    padding: var(--spacer-sm);
+}
+.active{
+    border: 2px solid var(--colors-grey-variant);
+    border-radius: 8px;
+    color: var(--colors-secondary);
+}
+
+@media all and (min-width: 500px){
+    
+}
+
+@media all and (min-width: 750px){
+   
 }
