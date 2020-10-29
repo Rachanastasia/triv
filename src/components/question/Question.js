@@ -1,6 +1,5 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState } from 'react'
 import Answers from './Answers';
-import { GrCaretNext } from 'react-icons/gr';
 import Result from './Result';
 
 function Question(props) {
