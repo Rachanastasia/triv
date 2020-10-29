@@ -1,8 +1,12 @@
 # TRIV
 
-Triv helps you become better at trivia by generating random trivia questions.
+Triv helps you become better at trivia by generating a series 10 random questions.
 
-Live app:
+If you answer correctly, the question is removed from the randomized selection. If you answered wrong, the question may show up again.
+
+After 10 questions, you will see your score.
+
+Live App: [Triv](https://triv.vercel.app/)
 
 ## Available Scripts
 
