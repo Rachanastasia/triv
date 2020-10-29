@@ -58,6 +58,7 @@ button{
     background-color: var(--colors-grey-variant);
     outline: 0;
     font-size: var(--fontsize-sm);
+    
 }
 
 button:focus{
@@ -92,3 +93,12 @@ button:focus{
     padding-top: var(--spacer-sm);
 
 }
+
+@media all and (min-width: 750px){
+    section{
+        width: 70vw;
+        padding: var(--spacer-lg);
+        align-self: center;
+    }
+}
+
