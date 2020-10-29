@@ -4,18 +4,18 @@ function Result(props) {
     return (
         <Fragment>
             {props.answer
-                ? <Fragment>
-                    <h2>That's correct!</h2>
+                ? <div className='result'>
+                    <h3>That's correct!</h3>
                     <p>{props.correct}</p>
                     <button onClick={props.next}>Next</button>
-                </Fragment>
+                </div>
 
-                : <Fragment>
-                    <h2>Not quite!</h2>
-                    <h3>The correct answer is :</h3>
+                : <div className='result'>
+                    <h3>Not quite!</h3>
+                    <h4>The correct answer is :</h4>
                     <p>{props.correct}</p>
                     <button onClick={props.next}>Next</button>
-                </Fragment>
+                </div>
             }
         </Fragment>
     )
