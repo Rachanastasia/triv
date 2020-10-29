@@ -12,7 +12,6 @@ function Question(props) {
     let answers = [...props.question.incorrect, props.question.correct].sort();
 
     const checkAnswer = (selected) => {
-        console.log(selected)
         if (selected === null) {
             return true;
         }
@@ -25,7 +24,6 @@ function Question(props) {
         setAnswer(null)
 
     }
-    console.log(answer)
 
     return (
         <Fragment>

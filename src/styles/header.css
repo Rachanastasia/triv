@@ -1,0 +1,15 @@
+header{
+    height: inherit;
+    display: flex;
+    width: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: calc(var(--spacer-lg) * 2);
+ 
+}
+
+header h1{
+    transform: rotate(90deg);
+    font-size: 50px;
+
+}

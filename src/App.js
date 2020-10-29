@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Quiz from './components/Quiz';
 import Start from './components/Start';
 import Header from './components/Header';
