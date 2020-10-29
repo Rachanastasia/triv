@@ -6,7 +6,7 @@ If you answer correctly, the question is removed from the randomized selection. 
 
 After 10 questions, you will see your score.
 
-Live App: [Trivi](https://triv.vercel.app/)
+Live App: [Trivi](https://trivi.vercel.app/)
 
 ## Available Scripts
 
