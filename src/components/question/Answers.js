@@ -4,7 +4,6 @@ function Answers(props) {
     const [selected, setSelected] = useState(null);
 
     const handleSubmit = () => {
-        console.log(selected)
         props.check(selected);
     }
 

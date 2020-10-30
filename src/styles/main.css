@@ -10,7 +10,7 @@ main{
     background-color: var(--colors-primary);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: var(--colors-grey-variant);
     font-family: var(--font);
@@ -47,6 +47,7 @@ li{
 
 p{
     font-size: var(--fontsize-med);
+    padding-bottom: var(--spacer-med);
 }
 
 button{
@@ -76,12 +77,12 @@ button:focus{
     width: 60vw;
     border: 2px solid var(--colors-primary);
     cursor: pointer;
-    
-    
 }
+
 .answer li{
     padding: var(--spacer-sm);
 }
+
 .active{
     border: 2px solid var(--colors-grey-variant);
     border-radius: 8px;
@@ -92,6 +93,13 @@ button:focus{
 .start >*{
     padding-top: var(--spacer-sm);
 
+}
+
+@media all and (min-width: 550px){
+    section{
+        padding: var(--spacer-lg);
+        align-self: center;
+    }
 }
 
 @media all and (min-width: 750px){

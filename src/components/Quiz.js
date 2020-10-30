@@ -37,10 +37,10 @@ function Quiz(props) {
     const playAgain = () => {
         props.playing(false)
     }
-
+    console.log('counter', i, 'score', score)
     return (
         <section>
-            {i <= 10
+            {i <= 9
                 ? <Question question={questions[question]} next={(ans) => onNext(ans)} />
                 : <Results playAgain={playAgain} score={score} />
             }
