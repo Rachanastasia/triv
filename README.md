@@ -2,11 +2,56 @@
 
 Trivi helps you become better at trivia by generating a series 10 random questions.
 
-If you answer correctly, the question is removed from the randomized selection. If you answered wrong, the question may show up again.
-
-After 10 questions, you will see your score.
-
 Live App: [Trivi](https://trivi.vercel.app/)
+
+## Tech Stack
+
+- React
+- CSS3
+- HTML5
+- Deployed with Vercel
+
+## Codebase Structure
+
+### /src/App.js
+
+Renders the <main> and controls which screen is shown through conditional rendering.
+
+### /src/Apprentice_TandemFor400_Data.json
+
+20 trivia questions with question, correct, and incorrect answers. Data provided by Tandem.
+
+### /src/components
+
+#### /Start.js
+
+Rendered if quiz has not yet been started. Has button to start quiz.
+
+#### /Quiz.js
+
+Wraps and controls flow of quiz questions. JSON data is imported and manipulated here and sent into the components in /questions as props. Stops quiz after 10th question.
+
+#### /question
+
+Contains three components, Question.js, and its two child components, Answers.js, which renders the individual answers, and Result.js, which shows if the selected answer was correct.
+
+#### /Results.js
+
+Rendered after 10th question. This page shows the score and has a button to return to Start.js
+
+### /styles
+
+#### /global.css
+
+Contains global variables
+
+#### /main.css
+
+Contains styles for quiz body
+
+#### /header.css
+
+Styles the header
 
 ## Available Scripts
 
